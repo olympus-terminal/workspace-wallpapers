@@ -2,7 +2,7 @@
 Type=Application
 Name=Workspace Wallpapers
 Comment=Automatically change wallpapers when switching workspaces
-Exec=/home/drn2/Documents/desktops/workspace-wallpapers.sh --daemon
+Exec=bash -c "$HOME/Documents/desktops/workspace-wallpapers.sh --daemon"
 Icon=preferences-desktop-wallpaper
 Terminal=false
 Categories=Utility;

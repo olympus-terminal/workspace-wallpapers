@@ -17,7 +17,7 @@ import io
 
 class WallpaperScraper:
     def __init__(self):
-        self.output_dir = Path('/home/drn2/Documents/desktops/scraped-wallpapers')
+        self.output_dir = Path.home() / 'Documents' / 'desktops' / 'scraped-wallpapers'
         self.output_dir.mkdir(exist_ok=True)
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -241,7 +241,7 @@ def main():
     
     if count >= 11:
         print("\n🎉 Success! You now have enough ultra-dark wallpapers!")
-        print("📍 Location: /home/drn2/Documents/desktops/scraped-wallpapers/")
+        print(f"📍 Location: {Path.home()}/Documents/desktops/scraped-wallpapers/")
     else:
         print(f"\n⚠️  Only found {count} dark wallpapers. You may need to:")
         print("   1. Adjust darkness threshold")

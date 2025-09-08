@@ -9,18 +9,21 @@ CURRENT_WALLPAPER=$(gsettings get org.gnome.desktop.background picture-uri-dark 
 # Configuration - Set your wallpapers here (0-indexed)
 declare -A WALLPAPERS
 
+# Base directory for wallpapers (change this to your wallpaper location)
+BASE_DIR="${HOME}/Documents/desktops"
+
 # Your 11 workspaces with FRESHLY SCRAPED ultra-dark wallpapers
-WALLPAPERS[0]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_003.jpg"  # 98.0% dark
-WALLPAPERS[1]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_005.jpg"  # 97.2% dark
-WALLPAPERS[2]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_004.jpg"  # 96.2% dark
-WALLPAPERS[3]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_010.jpg"  # 95.9% dark
-WALLPAPERS[4]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_009.jpg"  # 94.0% dark
-WALLPAPERS[5]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_007.jpg"  # 93.6% dark
-WALLPAPERS[6]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_001.jpg"  # 90.7% dark
-WALLPAPERS[7]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_012.jpg"  # 90.5% dark
-WALLPAPERS[8]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_002.jpg"  # 88.7% dark
-WALLPAPERS[9]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_015.jpg"  # 88.1% dark
-WALLPAPERS[10]="file:///home/drn2/Documents/desktops/scraped-wallpapers/dark_wallhaven_011.jpg" # 84.1% dark
+WALLPAPERS[0]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_003.jpg"  # 98.0% dark
+WALLPAPERS[1]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_005.jpg"  # 97.2% dark
+WALLPAPERS[2]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_004.jpg"  # 96.2% dark
+WALLPAPERS[3]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_010.jpg"  # 95.9% dark
+WALLPAPERS[4]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_009.jpg"  # 94.0% dark
+WALLPAPERS[5]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_007.jpg"  # 93.6% dark
+WALLPAPERS[6]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_001.jpg"  # 90.7% dark
+WALLPAPERS[7]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_012.jpg"  # 90.5% dark
+WALLPAPERS[8]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_002.jpg"  # 88.7% dark
+WALLPAPERS[9]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_015.jpg"  # 88.1% dark
+WALLPAPERS[10]="file://${BASE_DIR}/scraped-wallpapers/dark_wallhaven_011.jpg" # 84.1% dark
 
 # You can customize these paths to your own images
 # Just make sure to use the file:// prefix

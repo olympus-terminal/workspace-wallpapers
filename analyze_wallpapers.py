@@ -92,10 +92,12 @@ def scan_directory(directory):
 
 def main():
     # Directories to scan
+    from pathlib import Path
+    home = Path.home()
     directories = [
-        '/home/drn2/Documents/desktops/wallpapers',
-        '/home/drn2/Documents/desktops/hand-picked',
-        '/usr/share/backgrounds'
+        home / 'Documents/desktops/wallpapers',
+        home / 'Documents/desktops/hand-picked',
+        Path('/usr/share/backgrounds')
     ]
     
     all_results = []
@@ -141,7 +143,7 @@ def main():
             print(f"  • {img['filename']}: Dark={img['darkness_score']:.1f}%, {img['resolution']}")
     
     # Save results to JSON
-    output_file = '/home/drn2/Documents/desktops/wallpaper_analysis.json'
+    output_file = home / 'Documents/desktops/wallpaper_analysis.json'
     with open(output_file, 'w') as f:
         json.dump({
             'all_results': all_results,

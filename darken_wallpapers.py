@@ -36,7 +36,7 @@ def darken_image(input_path, output_path, darkness_factor=0.4):
 
 def main():
     # Create darkened directory
-    output_dir = Path('/home/drn2/Documents/desktops/wallpapers-dark')
+    output_dir = Path.home() / 'Documents' / 'desktops' / 'wallpapers-dark'
     output_dir.mkdir(exist_ok=True)
     
     # Images to darken (the bright high-res ones)
@@ -54,7 +54,7 @@ def main():
     print("🌑 Darkening wallpapers...\n")
     
     for filename, darkness in images_to_darken:
-        input_path = Path(f'/home/drn2/Documents/desktops/wallpapers/{filename}')
+        input_path = Path.home() / 'Documents' / 'desktops' / 'wallpapers' / filename
         if input_path.exists():
             output_path = output_dir / f'dark_{filename}'
             if darken_image(input_path, output_path, darkness):
@@ -65,7 +65,7 @@ def main():
     # Copy the already dark ones
     already_dark = ['dark_stars1.jpg', 'night_city1.jpg', 'dark_city_night1.jpg']
     for filename in already_dark:
-        input_path = Path(f'/home/drn2/Documents/desktops/wallpapers/{filename}')
+        input_path = Path.home() / 'Documents' / 'desktops' / 'wallpapers' / filename
         if input_path.exists():
             output_path = output_dir / filename
             img = Image.open(input_path)
