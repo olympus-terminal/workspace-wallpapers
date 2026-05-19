@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="workspace-wallpapers banner" width="100%">
+</p>
+
 # Dynamic Workspace Wallpapers for Ubuntu
 
 Automatically switch wallpapers when changing workspaces in Ubuntu GNOME. Each workspace gets its own unique dark wallpaper.
